@@ -17,7 +17,7 @@ export default function Page() {
 
           <div
             id="waitlist"
-            className="relative z-10 -mt-32 px-4 pb-8 sm:px-6 lg:px-8"
+            className="relative z-10 -mt-16 px-4 pb-8 sm:-mt-32 sm:px-6 lg:px-8"
           >
             <WaitlistForm />
           </div>

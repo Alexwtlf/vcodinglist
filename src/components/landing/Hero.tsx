@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col items-center justify-center px-4 pt-20 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen flex-col items-center justify-center px-4 pb-24 pt-20 sm:pb-32 sm:px-6 lg:px-8"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />

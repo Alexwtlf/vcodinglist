@@ -2,14 +2,15 @@
 
 ### Overview
 This repository contains a **production-ready waitlist landing page** for **VcodingList**.
-The landing is designed to capture early interest and collect emails for a waitlist (currently **UI-only**, backend integration planned).
+The landing is designed to capture early interest and collect emails for a waitlist.
+Current behavior: **email signup triggers a confirmation email via Resend** (database persistence planned next).
 
 ### Goal
 - Ship a clean, premium SaaS landing page that communicates the value proposition quickly.
 - Convert visitors into waitlist signups (“Join Waitlist”).
 
 ### Non-goals (for current phase)
-- No real email persistence yet (no DB writes).
+- No DB persistence yet (planned: Supabase).
 - No authentication.
 - No dashboard/product features.
 
@@ -35,7 +36,7 @@ Single page route: **`/`**
   - CTA scrolls to the waitlist email input (`#waitlist-email`) with scroll offset so the fixed header doesn’t cover it
 
 ### 2) Hero (full viewport)
-- Badge: “The #1 platform for AI-built products”
+- Badge: “Built for the AI-native era”
 - Headline:
   - “Launch. Validate.”
   - “Reach Real Users.” (gradient accent)
@@ -44,12 +45,12 @@ Single page route: **`/`**
   - “Turn early traction into real users.”
 - Background: subtle blurred gradient accents
 
-### 3) Waitlist form (overlay)
-- UI-only email submit form:
+### 3) Waitlist form (inside Hero)
+- Email submit form:
   - Email input
   - “Join Waitlist” button
   - Validation: basic email regex + empty state
-  - Real POST request to server endpoint
+  - Real POST request to server endpoint (`POST /api/waitlist`)
 - Privacy note: “We respect your privacy. No spam, ever.”
 
 ### 4) Social proof / stats
@@ -111,6 +112,7 @@ VcodingList exists to close that gap.”
 
 ### Environment variables
 - `RESEND_API_KEY` (required)
+- `NEXT_PUBLIC_SITE_URL` (recommended; production: `https://vcodinglist.com`)
 - `WAITLIST_FROM_EMAIL` (recommended; use a verified sender/domain in Resend for production)
 - `WAITLIST_NOTIFY_EMAIL` (optional; internal notification recipient)
 
@@ -120,7 +122,7 @@ VcodingList exists to close that gap.”
 ---
 
 ## Deployment (Vercel)
-Plan: deploy **this landing** to Vercel as production.
+Status: deployed to **Vercel** and running on **`vcodinglist.com`** (production).
 
 ### Steps
 1. Push repo to GitHub.

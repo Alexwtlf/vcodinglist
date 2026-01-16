@@ -6,7 +6,7 @@ Minimal, premium waitlist landing for **VcodingList**, built with **Next.js 16 (
 - **Landing page**: `src/app/page.tsx`
 - **Landing sections/components**: `src/components/landing/*`
 - **Design tokens + utilities** (colors, gradient text, animations): `src/app/globals.css`
-- **Waitlist form**: UI-only (no backend yet)
+- **Waitlist form**: `POST /api/waitlist` → sends confirmation email via **Resend**
 
 ## Requirements
 - **Node.js**: 18.18+ (or 20+ recommended)
@@ -37,6 +37,7 @@ Local dev: create `.env.local` (do **not** commit it) and copy variables from `e
 
 Vercel: Project → Settings → Environment Variables:
 - `RESEND_API_KEY` (required)
+- `NEXT_PUBLIC_SITE_URL` (recommended; set to `https://vcodinglist.com` in production)
 - `WAITLIST_FROM_EMAIL` (recommended)
 - `WAITLIST_NOTIFY_EMAIL` (optional)
 
@@ -56,6 +57,7 @@ Then redeploy.
 This is a standard Next.js app — deploy to Vercel (recommended) or any Node hosting.
 
 - **Vercel**: import the repo, set framework to Next.js, deploy.
+- **Domain**: production runs on `vcodinglist.com` (Vercel project domain).
 - **Production build locally**:
 
 ```bash
@@ -67,6 +69,6 @@ npm run start
 - **App Router location**: this project uses `src/app` (not root `app/`).
 
 ## Roadmap (next)
-- Persist waitlist emails (Sheets/Airtable/Supabase/etc.)
+- Persist waitlist emails (Supabase) in addition to sending email
 - Analytics events for CTA + form submit
 - SEO: OpenGraph, Twitter cards, sitemap/robots, metadata polish

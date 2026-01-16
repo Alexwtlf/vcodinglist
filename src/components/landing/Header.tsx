@@ -1,9 +1,9 @@
 "use client";
 
-import type React from "react";
+import type { MouseEvent } from "react";
 
 export function Header() {
-  const scrollToId = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  const scrollToId = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
 

@@ -28,12 +28,28 @@ export function WaitlistForm() {
     }
 
     setStatus("loading");
+    setErrorMessage("");
 
-    // UI-only: simulate request latency
-    await new Promise((resolve) => setTimeout(resolve, 900));
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: value }),
+      });
 
-    setStatus("success");
-    setEmail("");
+      const data = (await res.json()) as { ok?: boolean; error?: string };
+      if (!res.ok || !data?.ok) {
+        setStatus("error");
+        setErrorMessage(data?.error ?? "Something went wrong. Please try again.");
+        return;
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Please try again.");
+    }
   };
 
   if (status === "success") {

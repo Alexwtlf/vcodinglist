@@ -49,7 +49,7 @@ Single page route: **`/`**
   - Email input
   - “Join Waitlist” button
   - Validation: basic email regex + empty state
-  - Simulated loading + success state
+  - Real POST request to server endpoint
 - Privacy note: “We respect your privacy. No spam, ever.”
 
 ### 4) Social proof / stats
@@ -99,8 +99,23 @@ VcodingList exists to close that gap.”
   - simple animations (`animate-fade-up`, `animate-scale-in`)
 
 ### Current behavior of “Join Waitlist”
-- It **does not send data anywhere yet**.
-- It validates email and shows success state after simulated delay.
+- It sends a request to `POST /api/waitlist`.
+- Server sends a confirmation email via Resend.
+- Optional: server also sends an internal notification email if configured.
+
+## Resend integration (waitlist)
+### Route handler
+- Endpoint: `src/app/api/waitlist/route.ts`
+- Method: `POST`
+- Body: JSON `{ "email": "user@example.com" }`
+
+### Environment variables
+- `RESEND_API_KEY` (required)
+- `WAITLIST_FROM_EMAIL` (recommended; use a verified sender/domain in Resend for production)
+- `WAITLIST_NOTIFY_EMAIL` (optional; internal notification recipient)
+
+### Notes
+- Keep Resend API key server-side only (never in client components).
 
 ---
 

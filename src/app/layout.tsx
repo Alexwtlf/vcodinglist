@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: "VcodingList — Launch. Validate. Reach Real Users.",
   description:
     "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vcodinglist.com"),
+  openGraph: {
+    type: "website",
+    title: "VcodingList — Launch. Validate. Reach Real Users.",
+    description:
+      "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VcodingList — Launch. Validate. Reach Real Users.",
+    description:
+      "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
+  },
 };
 
 export default function RootLayout({

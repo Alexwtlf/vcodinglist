@@ -11,7 +11,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-4xl text-center animate-fade-up">
         <p className="mb-8 inline-flex items-center rounded-full border border-primary/20 bg-accent px-4 py-2 text-sm font-medium text-accent-foreground">
-        Built for the AI-native era
+        Built for the AI-native era!
         </p>
 
         <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">

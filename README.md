@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## VcodingList — Waitlist Landing (Next.js)
 
-## Getting Started
+Minimal, premium waitlist landing for **VcodingList**, built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+### What’s inside
+- **Landing page**: `src/app/page.tsx`
+- **Landing sections/components**: `src/components/landing/*`
+- **Design tokens + utilities** (colors, gradient text, animations): `src/app/globals.css`
+- **Waitlist form**: UI-only (no backend yet)
+
+## Requirements
+- **Node.js**: 18.18+ (or 20+ recommended)
+- **npm**: comes with Node
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` (or the port printed in the terminal).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
+- **dev**: `npm run dev`
+- **build**: `npm run build`
+- **start**: `npm run start`
+- **lint**: `npm run lint`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
+This is a standard Next.js app — deploy to Vercel (recommended) or any Node hosting.
 
-## Learn More
+- **Vercel**: import the repo, set framework to Next.js, deploy.
+- **Production build locally**:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
+- **App Router location**: this project uses `src/app` (not root `app/`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Roadmap (next)
+- Persist waitlist emails (Sheets/Airtable/Supabase/etc.)
+- Analytics events for CTA + form submit
+- SEO: OpenGraph, Twitter cards, sitemap/robots, metadata polish

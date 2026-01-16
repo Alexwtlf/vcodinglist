@@ -4,7 +4,6 @@ import { Hero } from "@/components/landing/Hero";
 import { Quote } from "@/components/landing/Quote";
 import { Stats } from "@/components/landing/Stats";
 import { ValueProps } from "@/components/landing/ValueProps";
-import { WaitlistForm } from "@/components/landing/WaitlistForm";
 
 export default function Page() {
   return (
@@ -12,16 +11,7 @@ export default function Page() {
       <Header />
 
       <main>
-        <div className="relative">
-          <Hero />
-
-          <div
-            id="waitlist"
-            className="relative z-10 -mt-16 px-4 pb-8 sm:-mt-32 sm:px-6 lg:px-8"
-          >
-            <WaitlistForm />
-          </div>
-        </div>
+        <Hero />
 
         <Stats />
         <ValueProps />

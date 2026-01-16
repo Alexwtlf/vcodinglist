@@ -83,7 +83,7 @@ const metrics = [
 
 export function Stats() {
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8">
+    <section className="px-4 pb-16 pt-10 sm:px-6 sm:pt-12 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <div className="mb-10 flex flex-wrap justify-center gap-8 sm:gap-12">
           {metrics.map((metric) => (
@@ -111,7 +111,7 @@ export function Stats() {
             ))}
           </div>
           <span className="ml-4 text-sm text-muted-foreground">
-          Early builders get featured here
+            Early builders get featured here
           </span>
         </div>
       </div>

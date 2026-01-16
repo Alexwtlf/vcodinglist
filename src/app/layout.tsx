@@ -8,17 +8,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
   title: "VcodingList — Launch. Validate. Reach Real Users.",
   description:
     "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://vcodinglist.com"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
     title: "VcodingList — Launch. Validate. Reach Real Users.",
     description:
       "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
-    url: "/",
+    url: siteUrl,
     images: [
       {
         url: "/og.png",

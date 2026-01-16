@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
+    siteName: "VcodingList",
     title: "VcodingList — Launch. Validate. Reach Real Users.",
     description:
       "The product discovery and ranking platform for AI-native builders. Turn early traction into real users.",
@@ -49,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-dvh antialiased`}>
+        <body className={`${inter.className} min-h-dvh`}>
         <ScrollManager />
         {children}
         <Analytics />

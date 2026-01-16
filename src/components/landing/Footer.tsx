@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="border-t border-border px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
         <a
-          href="https://twitter.com/alexib"
+          href="https://x.com/alexwtlf"
           target="_blank"
           rel="noopener noreferrer"
           className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors duration-200 hover:bg-primary/10 hover:text-primary"

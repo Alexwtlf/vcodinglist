@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import Image from "next/image";
 
 function UsersIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -60,10 +61,24 @@ function SparklesIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+type IconProps = { className?: string };
+
+function CursorIcon({ className }: IconProps) {
+  return (
+    <Image
+      src="/cursor.png"
+      alt="Cursor logo"
+      width={24}
+      height={24}
+      className={className}
+    />
+  );
+}
+
 const metrics = [
   { value: "2M+", label: "AI-native builders", icon: UsersIcon },
   { value: "80%", label: "avg. Vibe in 2026", icon: SparklesIcon },
-  { value: "Cursor", label: "top AI-native tool", icon: null },
+  { value: "Cursor", label: "top AI-native tool", icon: CursorIcon },
 ] as const;
 
 export function Stats() {
@@ -74,9 +89,7 @@ export function Stats() {
           {metrics.map((metric) => (
             <div key={metric.value} className="text-center">
               <div className="flex items-center justify-center gap-2 text-2xl font-bold text-foreground sm:text-3xl">
-                {metric.icon ? (
-                  <metric.icon className="h-6 w-6 text-primary" />
-                ) : null}
+                {metric.icon ? <metric.icon className="h-6 w-6 text-primary" /> : null}
                 {metric.value}
               </div>
               <div className="mt-1 text-sm text-muted-foreground">
@@ -98,7 +111,7 @@ export function Stats() {
             ))}
           </div>
           <span className="ml-4 text-sm text-muted-foreground">
-            Early signal &gt; vanity metrics
+          Early builders get featured here
           </span>
         </div>
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ScrollManager } from "@/components/ScrollManager";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-dvh antialiased`}>
         <ScrollManager />
         {children}
+        <Analytics />
       </body>
     </html>
   );

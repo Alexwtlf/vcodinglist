@@ -45,7 +45,14 @@ export async function POST(req: Request) {
       from,
       to: email,
       subject: "You’re on the VcodingList waitlist",
-      text: "Thanks for joining the VcodingList waitlist — we’ll email you at launch.",
+      text: `You’re in 🚀
+
+Thanks for joining the VcodingList waitlist.
+We’ll email you at launch.
+
+Updates & progress → https://x.com/alexwtlf
+
+— VcodingList`,
     });
 
     // 2) Optional internal notification

@@ -23,15 +23,15 @@ export function Hero() {
           </p>
 
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          Launch. Get feedback.
+            <span className="whitespace-nowrap">Launch. Get feedback.</span>
             <br />
             <span className="gradient-text">Find your first 100 users.</span>
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            The product discovery and ranking platform for AI-native builders.
+          A discovery and ranking platform for AI-native builders.
             <br className="hidden sm:block" />
-            Submit in under 60 seconds and get ranked by real signal.
+             Submit your product in under 60 seconds.
           </p>
         </div>
 

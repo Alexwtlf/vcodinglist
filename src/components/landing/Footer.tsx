@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <p className="mt-8 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} <span className="font-brand">VCODINGLIST</span>. All rights
+          © {new Date().getFullYear()} <span className="font-brand">VcodingList</span>. All rights
           reserved.
         </p>
       </div>

@@ -32,8 +32,7 @@ export function ValueProps() {
           <span className="gradient-text">Getting users is not.</span>
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-          <span className="font-brand">VcodingList</span> solves the real bottlenecks AI-native
-          builders face today.
+          <span className="font-brand">VcodingList</span> helps AI-native builders move from launch to real users.
         </p>
       </div>
 

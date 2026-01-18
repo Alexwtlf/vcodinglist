@@ -103,9 +103,14 @@ export function WaitlistForm() {
       )}
 
       {status !== "error" && (
-        <p className="mt-4 text-center text-sm text-muted-foreground">
-          We respect your privacy. No spam, ever.
-        </p>
+        <div className="mt-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            We respect your privacy. No spam, ever.
+          </p>
+          <p className="mt-2 text-xs text-muted-foreground/70">
+            Used by AI-native builders shipping with Cursor, Claude, Replit & Lovable.
+          </p>
+        </div>
       )}
     </div>
   );

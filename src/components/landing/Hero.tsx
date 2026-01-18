@@ -23,7 +23,7 @@ export function Hero() {
           </p>
 
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="whitespace-nowrap">Launch. Get feedback.</span>
+            <span className="whitespace-nowrap">Launch.Get feedback.</span>
             <br />
             <span className="gradient-text">Find your first 100 users.</span>
           </h1>

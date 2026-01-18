@@ -103,6 +103,12 @@
     );
   }
 
+  .font-brand {
+    font-family: var(--font-brand), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-weight: 700;
+  }
+
   .gradient-text {
     background: linear-gradient(
       135deg,

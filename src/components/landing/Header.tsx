@@ -1,6 +1,7 @@
 "use client";
 
 import type { MouseEvent } from "react";
+import { Logo } from "@/components/branding/Logo";
 
 export function Header() {
   const scrollToId = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -25,10 +26,11 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#top"
-          className="text-xl font-bold text-foreground sm:text-2xl"
+          className="inline-flex items-center gap-2 text-xl text-foreground sm:text-2xl"
           onClick={(e) => scrollToId(e, "top")}
         >
-          VcodingList
+          <Logo size={32} priority className="h-[32px] w-[32px]" />
+          <span className="font-brand font-bold tracking-tight">VcodingList</span>
         </a>
         <a
           href="#waitlist-email"

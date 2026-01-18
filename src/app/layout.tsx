@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ScrollManager } from "@/components/ScrollManager";
 import { Analytics } from "@vercel/analytics/react";
@@ -7,6 +7,13 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["600"],
+  display: "swap",
+  variable: "--font-brand",
 });
 
 const siteUrl =
@@ -50,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body className={`${inter.className} min-h-dvh`}>
+      <body className={`${inter.className} ${poppins.variable} min-h-dvh`}>
         <ScrollManager />
         {children}
         <Analytics />

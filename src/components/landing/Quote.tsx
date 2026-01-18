@@ -9,7 +9,7 @@ export function Quote() {
           It didn&apos;t change how hard it is to get users.
           <br />
           <span className="text-muted-foreground">
-            VcodingList exists to close that gap.
+            <span className="font-brand">VCODINGLIST</span> exists to close that gap.
           </span>
           <span className="gradient-text">&rdquo;</span>
         </blockquote>

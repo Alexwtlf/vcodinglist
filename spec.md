@@ -20,8 +20,8 @@ Current behavior: **email signup triggers a confirmation email via Resend** (dat
 - **Next.js 16** (App Router, `src/app`)
 - **React 19**
 - **TypeScript**
-- **Tailwind CSS** (utility-first styling)
-- **Font**: Inter (via `next/font/google`)
+- **Tailwind CSS v4** (utility-first styling)
+- **Fonts**: Inter (body) + Poppins (brand) via `next/font/google`
 
 ---
 
@@ -36,14 +36,14 @@ Single page route: **`/`**
   - CTA scrolls to the waitlist email input (`#waitlist-email`) with scroll offset so the fixed header doesn’t cover it
 
 ### 2) Hero (full viewport)
-- Badge: “Built for the AI-native era”
+- Badge: "Built for the vibe coding era"
 - Headline:
-  - “Launch. Validate.”
-  - “Reach Real Users.” (gradient accent)
+  - "Launch. Get feedback."
+  - "Find your first 100 users." (gradient accent)
 - Subheadline:
-  - “The product discovery and ranking platform for AI-native builders.”
-  - “Turn early traction into real users.”
-- Background: subtle blurred gradient accents
+  - "A discovery and ranking platform for AI-native builders."
+  - "Submit your product in under 60 seconds."
+- Background: subtle blurred gradient accents (primary/secondary colors)
 
 ### 3) Waitlist form (inside Hero)
 - Email submit form:
@@ -60,15 +60,38 @@ Single page route: **`/`**
   - Cursor — top AI-native tool
 - “Early signal > vanity metrics” indicator row
 
-### 5) Value proposition / features
-- Headline:
-  - “Building is easy.”
-  - “Getting users is not.” (gradient accent)
-- 4 feature cards with hover styling:
-  1. Real Feedback, Not Noise
-  2. Validation Through Rankings
-  3. From Validation to Real Users
-  4. Built for Vibe Coders
+### 5) Value proposition — Pain Points & How It Works
+- Main headline:
+  - "Building is easy."
+  - "Getting users is not." (gradient accent)
+
+#### Pain Points ("Sound Familiar?")
+- Badge: "Sound Familiar?"
+- Subheadline: "This Is Your Chance"
+- 2 scenario cards with hover effects:
+  1. **Want to get users fast?** — "real users now", "viral", distribution vs visibility
+  2. **Have a great product but stuck?** — "can't break through the noise", "a different channel"
+- CTA arrow: "Here's how we solve this"
+
+#### How It Works
+- Headline: "How VcodingList Actually Works" (gradient)
+- Subheadline: "Not just another launch platform. A distribution engine."
+- 3 step cards with animated connecting lines:
+  1. **Launch & Signal** — ranked by builders who understand AI-native products
+  2. **Validation Filter** — real traction, upvotes + comments = proof
+  3. **Distribution to Real Users** — pushed outside the platform to consumer channels
+
+#### Differentiator Card
+- Badge: "THIS IS THE DIFFERENCE"
+- Key message:
+  - "We don't sell attention inside the platform." (gradient)
+  - "We take products outside the platform." (highlighted)
+- Tagline: "Distribution > Attention"
+
+#### Animations
+- Scroll-triggered fade-in animations (Intersection Observer)
+- Hover effects on all cards
+- Pulsing background blobs
 
 ### 6) Quote / mission
 Centered quote:
@@ -93,11 +116,16 @@ VcodingList exists to close that gap.”
 
 ### Styling / design system
 - Uses semantic CSS variables (HSL) for:
-  - `--background`, `--foreground`, `--primary`, `--secondary`, `--muted`, `--border`, etc.
+  - `--background`, `--foreground`, `--primary`, `--secondary`, `--muted`, `--border`, `--destructive`, etc.
 - Utility classes provided:
   - `.gradient-text` (text gradient)
   - `.gradient-teal-cyan` (background gradient)
+  - `.font-brand` (Poppins brand font)
   - simple animations (`animate-fade-up`, `animate-scale-in`)
+- Scroll-triggered animations:
+  - Custom `useInView` hook (Intersection Observer)
+  - Staggered fade-up effects on cards
+  - Scale-in effect on differentiator card
 
 ### Current behavior of “Join Waitlist”
 - It sends a request to `POST /api/waitlist`.
